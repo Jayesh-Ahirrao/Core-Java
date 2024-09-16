@@ -3,9 +3,9 @@ class Date {
     private int month;
     private int year;
 
-    private static int date;
+    private static int dateCount;
     static {
-        date = 1;
+        dateCount = 0;
     }
 
     public Date() {
@@ -44,8 +44,10 @@ class Date {
     }
 
     private void incrementCount() {
-        bookCount++;
-        System.out.println("Total count of Date object craeted: " + count);
-
+        dateCount++;
+        System.out.println("Total count of Date object craeted: " + dateCount);
+    }
+    public static int getBookCount() {
+        return dateCount;
     }
 }
